@@ -1,0 +1,111 @@
+.admin-dashboard {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.admin-dashboard h1 {
+  margin: 0;
+  color: #1890ff;
+  font-size: 28px;
+}
+
+.dashboard-section {
+  margin-bottom: 32px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-section h2 {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.ant-card {
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ant-statistic-title {
+  font-size: 16px;
+  color: #666;
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+.ant-statistic-content-value {
+  font-weight: 600;
+}
+
+/* Custom colors for different statistics */
+.dashboard-section:nth-child(1) .ant-statistic-content {
+  color: #1890ff; /* Gig Performance - Blue */
+}
+
+.dashboard-section:nth-child(2) .ant-statistic-content {
+  color: #52c41a; /* Order Performance - Green */
+}
+
+.dashboard-section:nth-child(3) .ant-statistic-content {
+  color: #722ed1; /* Payment Performance - Purple */
+}
+
+.dashboard-section:nth-child(4) .ant-statistic-content {
+  color: #fa8c16; /* User Performance - Orange */
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 16px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .admin-dashboard h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-section {
+    padding: 16px;
+  }
+
+  .dashboard-section h2 {
+    font-size: 18px;
+  }
+
+  .ant-statistic-content {
+    font-size: 20px;
+  }
+} 

@@ -1,0 +1,433 @@
+.transaction-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.transaction-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-title {
+  color: #1e293b;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Wallet Overview Styles */
+.wallet-overview {
+  margin-bottom: 2rem;
+}
+
+.wallet-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.wallet-card .ant-statistic-title {
+  font-size: 16px;
+  color: #4B5563;
+  margin-bottom: 8px;
+}
+
+.wallet-card .ant-statistic-content {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.balance-info {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #E5E7EB;
+}
+
+.balance-info small {
+  color: #6B7280;
+  font-size: 12px;
+  display: block;
+  line-height: 1.4;
+}
+
+/* Filters Section Styles */
+.filters-section {
+  margin-bottom: 2rem;
+}
+
+.filters-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.filters-card .ant-select,
+.filters-card .ant-picker {
+  width: 100%;
+}
+
+/* Transactions Section Styles */
+.transactions-section {
+  margin-bottom: 2rem;
+}
+
+.transactions-card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.transactions-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.transactions-table th {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.transactions-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  color: #475569;
+}
+
+.transactions-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.transactions-table td.positive {
+  color: #52c41a;
+  font-weight: 500;
+}
+
+.transactions-table td.negative {
+  color: #ff4d4f;
+  font-weight: 500;
+}
+
+.transactions-table td.pending {
+  color: #faad14;
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: white;
+  background-color: #d9d9d9;
+}
+
+.status-badge.pending {
+  background-color: #faad14;
+}
+
+.status-badge.completed {
+  background-color: #52c41a;
+}
+
+.status-badge.failed {
+  background-color: #ff4d4f;
+}
+
+.status-badge.refunded {
+  background-color: #722ed1;
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.pagination .ant-btn {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.pagination-info {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .transaction-container {
+    padding: 1rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .wallet-card .ant-statistic-content {
+    font-size: 1.25rem;
+  }
+
+  .transactions-table th,
+  .transactions-table td {
+    padding: 0.75rem;
+  }
+}
+
+/* Animation for status badges */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.status-badge {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Wallet Actions */
+.wallet-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wallet-actions button {
+  width: 100%;
+  height: 40px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.wallet-actions .withdraw-button {
+  background-color: #10B981;
+  border-color: #10B981;
+}
+
+.wallet-actions .withdraw-button:hover {
+  background-color: #059669;
+  border-color: #059669;
+}
+
+/* Withdrawal Modal Styles */
+.withdraw-modal .ant-modal-content {
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.withdraw-modal .ant-modal-header {
+  border-bottom: none;
+  padding-bottom: 16px;
+}
+
+.withdraw-modal .ant-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.withdraw-modal .available-balance {
+  background-color: #F3F4F6;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.withdraw-modal .balance-amount {
+  font-size: 24px;
+  font-weight: 600;
+  color: #10B981;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.withdraw-modal .balance-info {
+  margin-top: 4px;
+}
+
+.withdraw-modal .ant-form-item-label {
+  font-weight: 500;
+}
+
+.withdraw-modal .ant-input-affix-wrapper {
+  border-radius: 6px;
+}
+
+.withdraw-modal .ant-input-textarea {
+  border-radius: 6px;
+}
+
+.withdraw-modal .withdraw-form-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.withdraw-modal .withdraw-form-actions button {
+  min-width: 120px;
+}
+
+/* Error message styling */
+.withdraw-modal .ant-form-item-explain-error {
+  color: #EF4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Loading state for withdrawal button */
+.withdraw-form-actions .ant-btn-loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments for withdrawal modal */
+@media (max-width: 768px) {
+  .withdraw-modal .ant-modal-content {
+    padding: 1rem;
+  }
+
+  .withdraw-form-actions {
+    flex-direction: column;
+  }
+
+  .withdraw-form-actions .ant-btn {
+    width: 100%;
+  }
+
+  .balance-amount {
+    font-size: 1.25rem;
+  }
+}
+
+/* Deposit Modal Styles */
+.deposit-modal .ant-modal-content {
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.deposit-modal .ant-modal-header {
+  border-bottom: none;
+  padding-bottom: 16px;
+}
+
+.deposit-modal .ant-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1F2937;
+}
+
+.deposit-form-actions {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.deposit-form-actions button {
+  min-width: 120px;
+}
+
+.deposit-modal .error-message {
+  color: #EF4444;
+  font-size: 0.875rem;
+  margin: 12px 0;
+  padding: 8px;
+  background-color: #FEE2E2;
+  border-radius: 4px;
+}
+
+/* Stripe Elements styling */
+.deposit-modal .StripeElement {
+  padding: 12px;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.deposit-modal .StripeElement--focus {
+  border-color: #3B82F6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.deposit-modal .StripeElement--invalid {
+  border-color: #EF4444;
+}
+
+/* Responsive adjustments for deposit modal */
+@media (max-width: 768px) {
+  .deposit-modal .ant-modal-content {
+    padding: 16px;
+  }
+
+  .deposit-form-actions {
+    flex-direction: column;
+  }
+
+  .deposit-form-actions button {
+    width: 100%;
+  }
+}
+
+.wallet-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.wallet-actions button {
+  width: 100%;
+  height: 40px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.wallet-actions .withdraw-button {
+  background-color: #10B981;
+  border-color: #10B981;
+}
+
+.wallet-actions .withdraw-button:hover {
+  background-color: #059669;
+  border-color: #059669;
+} 

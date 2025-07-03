@@ -1,0 +1,56 @@
+.seller-dashboard {
+  padding: 24px;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+}
+
+.seller-dashboard h1 {
+  margin-bottom: 24px;
+  color: #1890ff;
+}
+
+.dashboard-section {
+  margin-bottom: 32px;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.ant-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+  transition: all 0.3s;
+}
+
+.ant-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.ant-statistic-title {
+  font-size: 16px;
+  color: #666;
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+@media (max-width: 768px) {
+  .seller-dashboard {
+    padding: 16px;
+  }
+  
+  .dashboard-section {
+    margin-bottom: 24px;
+  }
+} 

@@ -1,0 +1,140 @@
+
+/* App.css */
+
+.freelancehive-container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .connect-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .hero-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #e9ecef;
+  }
+  
+  .hero-buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start-browsing {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .create-gig {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .statistics {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .featured-gig {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .featured-gig-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .buttons button {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .apply-now {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .view-gig {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .top-performers {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .performers-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .performer-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .search-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  

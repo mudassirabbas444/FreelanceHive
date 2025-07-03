@@ -1,0 +1,67 @@
+.buyer-dashboard {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.buyer-dashboard h1 {
+  margin-bottom: 24px;
+  color: #1890ff;
+  font-size: 28px;
+}
+
+.dashboard-section {
+  margin-bottom: 32px;
+}
+
+.dashboard-section h2 {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 20px;
+}
+
+.dashboard-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+.ant-card {
+  height: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ant-statistic-title {
+  font-size: 16px;
+  color: #666;
+}
+
+.ant-statistic-content {
+  font-size: 24px;
+  color: #1890ff;
+}
+
+@media (max-width: 768px) {
+  .buyer-dashboard {
+    padding: 16px;
+  }
+
+  .buyer-dashboard h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-section h2 {
+    font-size: 18px;
+  }
+
+  .ant-statistic-content {
+    font-size: 20px;
+  }
+} 

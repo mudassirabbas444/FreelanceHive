@@ -1,0 +1,438 @@
+
+.buyer-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.buyer-page-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.75rem;
+  color: #1e293b;
+}
+
+.buyer-order-id-banner {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.buyer-tabs-container {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.buyer-tabs-header {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.buyer-tab-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  background: none;
+  color: #64748b;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.buyer-tab-button:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+}
+
+.buyer-tab-button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.buyer-tab-content {
+  padding: 2rem;
+}
+
+.buyer-tab-panel {
+  display: none;
+}
+
+.buyer-tab-panel.active {
+  display: block;
+}
+
+.buyer-content-card {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.buyer-content-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+.buyer-alerts-section {
+  margin-bottom: 2rem;
+}
+
+.buyer-dispute-section,
+.buyer-modification-section {
+  background-color: #fef2f2;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #fee2e2;
+}
+
+.buyer-dispute-section h3,
+.buyer-modification-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #991b1b;
+  margin-bottom: 1rem;
+}
+
+.buyer-dispute-text {
+  color: #7f1d1d;
+  line-height: 1.6;
+}
+
+.buyer-modification-details {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+.buyer-modification-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.buyer-gig-info {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.buyer-gig-title {
+  font-size: 1.25rem;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+
+.buyer-gig-image-container {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.buyer-gig-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buyer-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.buyer-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.buyer-info-icon {
+  color: #64748b;
+}
+
+.buyer-info-content h4 {
+  color: #64748b;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.buyer-info-content p {
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.buyer-deliverables-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.buyer-deliverable-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.buyer-deliverable-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #1e293b;
+}
+
+.buyer-actions-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.buyer-action-group {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+}
+
+.buyer-action-group h3 {
+  color: #1e293b;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.buyer-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.buyer-form-group label {
+  display: block;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.buyer-form-group textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  resize: vertical;
+}
+
+.buyer-rating-group {
+  margin-bottom: 2rem;
+}
+
+.buyer-star-rating {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.buyer-star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #e2e8f0;
+  transition: color 0.2s;
+}
+
+.buyer-star-btn.active {
+  color: #fbbf24;
+}
+
+.buyer-star-btn:hover {
+  color: #fbbf24;
+}
+
+.buyer-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+}
+
+.buyer-button.primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.buyer-button.primary:hover {
+  background-color: #2563eb;
+}
+
+.buyer-button.success {
+  background-color: #22c55e;
+  color: white;
+}
+
+.buyer-button.success:hover {
+  background-color: #16a34a;
+}
+
+.buyer-button.danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.buyer-button.danger:hover {
+  background-color: #dc2626;
+}
+
+.buyer-button.warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.buyer-button.warning:hover {
+  background-color: #d97706;
+}
+
+.buyer-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.buyer-status-badge.active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.buyer-status-badge.progress {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.buyer-status-badge.delivered {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.buyer-status-badge.completed {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.buyer-status-badge.disputed {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.buyer-status-badge.cancel {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+/* Loading and Error States */
+.buyer-loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1.5rem;
+}
+
+.buyer-loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid #e2e8f0;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.buyer-error-container,
+.buyer-not-found-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.buyer-error-container h2,
+.buyer-not-found-container h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+}
+
+.buyer-error-container p,
+.buyer-not-found-container p {
+  color: #64748b;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .buyer-order-details-page {
+    padding: 1rem;
+  }
+
+  .buyer-tabs-header {
+    flex-wrap: wrap;
+  }
+
+  .buyer-tab-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .buyer-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-modification-actions {
+    flex-direction: column;
+  }
+
+  .buyer-button {
+    width: 100%;
+    justify-content: center;
+  }
+} 

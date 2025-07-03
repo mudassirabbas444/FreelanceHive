@@ -1,0 +1,70 @@
+
+  
+  /* Header Styling */
+  .chat-list-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .chat-list-header h1 {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+  }
+  
+  /* Chat List */
+  .chat-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Chat Item */
+  .chat-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+  }
+  
+  .chat-item:hover {
+    background: #eaf2ff;
+    border-color: #3498db;
+  }
+  
+  /* Chat Info */
+  .chat-info {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* No Chats Message */
+  .no-chats {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    margin-top: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .chat-list-container {
+      padding: 15px;
+    }
+  
+    .chat-item {
+      padding: 12px;
+      font-size: 14px;
+    }
+  }
+  

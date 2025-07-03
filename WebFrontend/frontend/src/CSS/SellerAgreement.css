@@ -1,0 +1,145 @@
+.seller-agreement-modal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.seller-agreement-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.seller-agreement-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.seller-agreement-body {
+    padding: 2rem;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.seller-agreement-content {
+    color: #34495e;
+}
+
+.seller-agreement-heading {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+.seller-agreement-intro {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #34495e;
+}
+
+.seller-agreement-terms {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.seller-agreement-terms li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.seller-agreement-legal {
+    background-color: #fff3cd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #ffc107;
+}
+
+.seller-agreement-legal-title {
+    color: #856404;
+    font-weight: 600;
+}
+
+.seller-agreement-legal-text {
+    color: #856404;
+    margin-bottom: 1rem;
+}
+
+.seller-agreement-legal-list {
+    color: #856404;
+    padding-left: 1.5rem;
+}
+
+.seller-agreement-legal-list li {
+    margin-bottom: 0.5rem;
+}
+
+.seller-agreement-signature-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.seller-agreement-signature-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.seller-agreement-signature-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.seller-agreement-signature-canvas {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.seller-agreement-clear-btn {
+    align-self: flex-end;
+}
+
+.seller-agreement-checkbox {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.seller-agreement-checkbox .form-check-input:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.seller-agreement-footer {
+    background-color: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+    padding: 1rem;
+}
+
+.seller-agreement-cancel-btn {
+    min-width: 100px;
+}
+
+.seller-agreement-sign-btn {
+    min-width: 150px;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.seller-agreement-sign-btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.seller-agreement-sign-btn:disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+} 

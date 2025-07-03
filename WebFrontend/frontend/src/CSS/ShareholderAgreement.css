@@ -1,0 +1,139 @@
+.shareholder-agreement-modal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.shareholder-agreement-header {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.shareholder-agreement-title {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.shareholder-agreement-body {
+    padding: 2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.shareholder-agreement-content {
+    color: #34495e;
+}
+
+.shareholder-agreement-heading {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.5rem;
+}
+
+.shareholder-agreement-details {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.shareholder-agreement-details p {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.shareholder-agreement-terms {
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.shareholder-agreement-terms h5 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.shareholder-agreement-terms ol {
+    padding-left: 1.5rem;
+}
+
+.shareholder-agreement-terms li {
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+}
+
+.shareholder-agreement-signature-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.shareholder-agreement-signature-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.shareholder-agreement-signature-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.shareholder-agreement-signature-canvas {
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.shareholder-agreement-clear-btn {
+    align-self: flex-end;
+}
+
+.shareholder-agreement-checkbox {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.shareholder-agreement-checkbox .form-check-input:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.shareholder-agreement-download {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.shareholder-agreement-footer {
+    background-color: #f8f9fa;
+    border-top: 2px solid #e9ecef;
+    padding: 1rem;
+}
+
+.shareholder-agreement-cancel-btn {
+    min-width: 100px;
+}
+
+.shareholder-agreement-sign-btn {
+    min-width: 150px;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.shareholder-agreement-sign-btn:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.shareholder-agreement-sign-btn:disabled {
+    background-color: #6c757d;
+    border-color: #6c757d;
+} 

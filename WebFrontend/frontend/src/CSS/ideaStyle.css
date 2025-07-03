@@ -1,0 +1,17 @@
+/* Square card styling */
+.square-card {
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-footer button {
+    border-radius: 25px;
+}
