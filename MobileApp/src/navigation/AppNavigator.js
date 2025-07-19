@@ -40,172 +40,106 @@ import IdeaDetailSeller from '../IdeaPitching/IdeaDetailSeller';
 import IdeaDetailAdmin from '../IdeaPitching/IdeaDetailAdmin';
 import IdeaDetail from '../IdeaPitching/IdeaDetail';
 
-const Stack = createStackNavigator();
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 
-const BuyerNavigator = () => (
-  <Stack.Navigator
-    screenOptions={{
-      headerStyle: {
-        backgroundColor: '#007BFF',
-      },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    }}
-  >
-    {/* Buyer-specific screens */}
-    <Stack.Screen 
-      name="Gigs" 
-      component={ViewGigs}
-      options={{ title: 'Available Gigs' }}
-    />
-    <Stack.Screen 
-      name="GigDetails" 
-      component={ViewGigsDetails}
-      options={{ title: 'Gig Details' }}
-    />
-    <Stack.Screen 
-      name="Orders" 
-      component={ViewOrders}
-      options={{ title: 'My Orders' }}
-    />
-    <Stack.Screen 
-      name="OrderDetails" 
-      component={ViewOrderDetails}
-      options={{ title: 'Order Details' }}
-    />
-    <Stack.Screen 
-      name="CreateIdea" 
-      component={CreateIdea}
-      options={{ title: 'Create New Idea' }}
-    />
-    <Stack.Screen 
-      name="Ideas" 
-      component={Ideas}
-      options={{ title: 'My Ideas' }}
-    />
-    <Stack.Screen 
-      name="IdeaDetail" 
-      component={IdeaDetail}
-      options={{ title: 'Idea Details' }}
-    />
-    <Stack.Screen 
-      name="BuyerRequests" 
-      component={BuyerRequest}
-      options={{ title: 'My Requests' }}
-    />
-    <Stack.Screen 
-      name="CreateBuyerRequest" 
-      component={CreateBuyerRequest}
-      options={{ title: 'Create Request' }}
-    />
-    <Stack.Screen 
-      name="BuyerRequestDetail" 
-      component={BuyerRequestDetail}
-      options={{ title: 'Request Details' }}
-    />
-    {/* Common screens */}
-    <Stack.Screen name="Chat" component={Chat} />
-    <Stack.Screen 
-      name="ChatList" 
-      component={ChatList}
-      options={{ title: 'Chats' }}
-    />
-    <Stack.Screen 
-      name="Meeting" 
-      component={Meeting}
-      options={{ title: 'Meeting' }}
-    />
-    <Stack.Screen 
-      name="Profile" 
-      component={ViewProfile}
-      options={{ title: 'My Profile' }}
-    />
-    <Stack.Screen 
-      name="UpdateProfile" 
-      component={UpdateProfile}
-      options={{ title: 'Edit Profile' }}
-    />
+const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+
+// Stack navigators for each tab section (Buyer)
+const BuyerGigsStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Gigs" component={ViewGigs} />
+    <Stack.Screen name="GigDetails" component={ViewGigsDetails} />
+  </Stack.Navigator>
+);
+const BuyerOrdersStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Orders" component={ViewOrders} />
+    <Stack.Screen name="OrderDetails" component={ViewOrderDetails} />
+  </Stack.Navigator>
+);
+const BuyerIdeasStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Ideas" component={Ideas} />
+    <Stack.Screen name="CreateIdea" component={CreateIdea} />
+    <Stack.Screen name="IdeaDetail" component={IdeaDetail} />
+  </Stack.Navigator>
+);
+const BuyerProfileStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Profile" component={ViewProfile} />
+    <Stack.Screen name="UpdateProfile" component={UpdateProfile} />
   </Stack.Navigator>
 );
 
-const SellerNavigator = () => (
-  <Stack.Navigator
-    screenOptions={{
-      headerStyle: {
-        backgroundColor: '#007BFF',
+const BuyerTabNavigator = () => (
+  <Tab.Navigator
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ color, size }) => {
+        let iconName;
+        if (route.name === 'Gigs') iconName = 'briefcase-outline';
+        else if (route.name === 'Orders') iconName = 'list-outline';
+        else if (route.name === 'Ideas') iconName = 'bulb-outline';
+        else if (route.name === 'Profile') iconName = 'person-outline';
+        return <Ionicons name={iconName} size={size} color={color} />;
       },
-      headerTintColor: '#fff',
-      headerTitleStyle: {
-        fontWeight: 'bold',
-      },
-    }}
+      headerShown: false,
+    })}
   >
-    {/* Seller-specific screens */}
-    <Stack.Screen 
-      name="SellerGigs" 
-      component={ViewGigsSeller}
-      options={{ title: 'My Gigs' }}
-    />
-    <Stack.Screen 
-      name="GigSellerDetails" 
-      component={ViewGigDetailsSeller}
-      options={{ title: 'Gig Details' }}
-    />
-    <Stack.Screen 
-      name="SellerOrders" 
-      component={ViewOrdersSeller}
-      options={{ title: 'Orders Received' }}
-    />
-    <Stack.Screen 
-      name="SellerOrderDetails" 
-      component={ViewOrderDetailsSeller}
-      options={{ title: 'Order Details' }}
-    />
-    <Stack.Screen 
-      name="AllIdeas" 
-      component={AllIdeas}
-      options={{ title: 'Available Ideas' }}
-    />
-    <Stack.Screen 
-      name="IdeaDetailSeller" 
-      component={IdeaDetailSeller}
-      options={{ title: 'Idea Details' }}
-    />
-    <Stack.Screen 
-      name="AllBuyerRequests" 
-      component={AllBuyerRequests}
-      options={{ title: 'Available Requests' }}
-    />
-    <Stack.Screen 
-      name="BuyerRequestDetailSeller" 
-      component={BuyerRequestDetailSeller}
-      options={{ title: 'Request Details' }}
-    />
-    {/* Common screens */}
-    <Stack.Screen name="Chat" component={Chat} />
-    <Stack.Screen 
-      name="ChatList" 
-      component={ChatList}
-      options={{ title: 'Chats' }}
-    />
-    <Stack.Screen 
-      name="Meeting" 
-      component={Meeting}
-      options={{ title: 'Meeting' }}
-    />
-    <Stack.Screen 
-      name="Profile" 
-      component={ViewProfile}
-      options={{ title: 'My Profile' }}
-    />
-    <Stack.Screen 
-      name="UpdateProfile" 
-      component={UpdateProfile}
-      options={{ title: 'Edit Profile' }}
-    />
+    <Tab.Screen name="Gigs" component={BuyerGigsStack} />
+    <Tab.Screen name="Orders" component={BuyerOrdersStack} />
+    <Tab.Screen name="Ideas" component={BuyerIdeasStack} />
+    <Tab.Screen name="Profile" component={BuyerProfileStack} />
+  </Tab.Navigator>
+);
+
+
+const SellerGigsStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="My Gigs" component={ViewGigsSeller} />
+    <Stack.Screen name="GigSellerDetails" component={ViewGigDetailsSeller} />
   </Stack.Navigator>
+);
+const SellerOrdersStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Orders" component={ViewOrdersSeller} />
+    <Stack.Screen name="SellerOrderDetails" component={ViewOrderDetailsSeller} />
+  </Stack.Navigator>
+);
+const SellerIdeasStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Ideas" component={AllIdeas} />
+    <Stack.Screen name="IdeaDetailSeller" component={IdeaDetailSeller} />
+    <Stack.Screen name="IdeaDetailAdmin" component={IdeaDetailAdmin} />
+  </Stack.Navigator>
+);
+const SellerProfileStack = () => (
+  <Stack.Navigator screenOptions={{ headerShown: false }}>
+    <Stack.Screen name="Profile" component={ViewProfile} />
+    <Stack.Screen name="UpdateProfile" component={UpdateProfile} />
+  </Stack.Navigator>
+);
+
+const SellerTabNavigator = () => (
+  <Tab.Navigator
+    screenOptions={({ route }) => ({
+      tabBarIcon: ({ color, size }) => {
+        let iconName;
+        if (route.name === 'My Gigs') iconName = 'briefcase-outline';
+        else if (route.name === 'Orders') iconName = 'list-outline';
+        else if (route.name === 'Ideas') iconName = 'bulb-outline';
+        else if (route.name === 'Profile') iconName = 'person-outline';
+        return <Ionicons name={iconName} size={size} color={color} />;
+      },
+      headerShown: false,
+    })}
+  >
+    <Tab.Screen name="My Gigs" component={SellerGigsStack} />
+    <Tab.Screen name="Orders" component={SellerOrdersStack} />
+    <Tab.Screen name="Ideas" component={SellerIdeasStack} />
+    <Tab.Screen name="Profile" component={SellerProfileStack} />
+  </Tab.Navigator>
 );
 
 const MainNavigator = () => {
@@ -231,7 +165,7 @@ const MainNavigator = () => {
 
   if (loading) return null;
 
-  return userRole === 'Seller' ? <SellerNavigator /> : <BuyerNavigator />;
+  return userRole === 'Seller' ? <SellerTabNavigator /> : <BuyerTabNavigator />;
 };
 
 const AppNavigator = () => {

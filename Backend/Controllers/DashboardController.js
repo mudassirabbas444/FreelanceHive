@@ -20,8 +20,6 @@ exports.getAdminDashboard = async (req, res) => {
 // Seller Dashboard
 exports.getSellerDashboard = async (req, res) => {
     try {
-        // Verify that the requesting user is a seller
-       
 
         const { startDate, endDate } = req.query;
         const dashboardData = await Seller.fetchDashboardData(req.params.userId, startDate, endDate);
